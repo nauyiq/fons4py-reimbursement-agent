@@ -1,6 +1,8 @@
 # Day 02 — MySQL 持久化
 
-**时间盒：180 分钟**（30 分钟学习、120 分钟编码、30 分钟验收）。**状态：TODO**。关联任务看板：`docs/05-development-board.md`。
+**时间盒：180 分钟**（30 分钟学习、120 分钟编码、30 分钟验收）。**状态：DONE（2026-10-15）**。关联任务看板：`docs/05-development-board.md`。
+
+> 环境调整（2026-10-15）：任务单原定"Docker MySQL 8 测试环境"，经确认改为**现成 MySQL 8 实例**；数据库凭证通过 `.env` 注入（密码不经过对话、不进 Git，见根目录 `.gitignore` 与 `.env.example`）。其余目标不变。
 
 ## 今日唯一目标
 
@@ -19,10 +21,10 @@ SQLAlchemy 2、async session、ORM mapping、迁移。只学习当日任务需�
 
 ## 验收（30 分钟）
 
-- [ ] 能迁移和回滚 schema；写入和查询业务表。
-- [ ] 代码能启动，相关测试实际运行并记录结果。
-- [ ] 没有真实密钥、没有擅自扩展 MVP 范围。
-- [ ] 在 `docs/05-development-board.md` 更新当日状态。
+- [x] 能迁移和回滚 schema；写入和查询业务表。（downgrade base → upgrade head 完整验证；2 个集成测试通过）
+- [x] 代码能启动，相关测试实际运行并记录结果。（`uv run pytest`：4 passed in 2.92s）
+- [x] 没有真实密钥、没有擅自扩展 MVP 范围。（密码仅存于本地 .env，未经过对话与 Git）
+- [x] 在 `docs/05-development-board.md` 更新当日状态。
 
 ## 面试复盘
 

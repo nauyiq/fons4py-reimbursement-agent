@@ -177,11 +177,14 @@ LangChain Agent 是“模型自主循环”，适合一问一答；但报销流�
 # 安装依赖（含 dev 测试依赖）
 uv sync --all-groups
 
-# 运行测试
-uv run pytest
+# 数据库初始化（首次；连接信息见 .env，模板在 .env.example）
+uv run python scripts/dev_create_database.py   # 建库（幂等）
+uv run alembic upgrade head                    # 建表（执行迁移）
 
-# 启动开发服务器
-uv run uvicorn reimbursement.main:app --reload
+# 日常开发
+uv run pytest                                  # 全部测试（含数据库集成测试）
+uv run alembic downgrade base                  # 回滚全部迁移
+uv run uvicorn reimbursement.main:app --reload # 启动开发服务器
 ```
 
 启动后访问：

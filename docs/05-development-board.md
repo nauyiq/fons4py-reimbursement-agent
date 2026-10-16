@@ -7,7 +7,7 @@
 | Day | 任务 | 核心学习 | 当日验收 | 状态 |
 |---|---|---|---|---|
 | 01 | Python 环境 + FastAPI | uv、Pydantic、async/await | /health、基本 DTO/API | DONE |
-| 02 | MySQL + ORM | SQLAlchemy、AsyncSession、Alembic | 两张核心表 CRUD | TODO |
+| 02 | MySQL + ORM | SQLAlchemy、AsyncSession、Alembic | 两张核心表 CRUD | DONE |
 | 03 | 领域服务 | dataclass、Decimal、pytest | 草稿/明细/金额/提交事务 | TODO |
 | 04 | LangChain Agent | Messages、Tools、create_agent | 自然语言创建草稿 | TODO |
 | 05 | LangGraph | StateGraph、nodes、edges | 草稿流程图跑通 | TODO |
